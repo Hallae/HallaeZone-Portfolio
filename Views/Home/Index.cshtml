@@ -8,6 +8,8 @@
 <!DOCTYPE HTML>
 
 <html>
+   
+
 <head>
     <title>Oxhoba Mcdowall</title>
     <meta charset="utf-8" />
@@ -15,7 +17,6 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="~/assets/css/main.css" />
-    
 
 </head>
 <body class="is-preload">
@@ -27,13 +28,13 @@
         <section class="intro">
             <header>
                 <h1>Keifer Mcdowall</h1>
-                <p>A C# Developer/p>
+                <p>A C# Developer</p>
                 <ul class="actions">
                     <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
                 </ul>
             </header>
             <div class="content">
-                <span class="image fill" data-position="center"><img src="/assets/images/pic01.jpg" alt="" /></span>
+                <span class="image fill" data-position="center"><img src="/assets/images/pic03.jpg" alt="" /></span>
             </div>
         </section>
 
@@ -240,6 +241,17 @@
     <script src="~/assets/js/breakpoints.min.js"></script>
     <script src="~/assets/js/util.js"></script>
     <script src="~/assets/js/main.js"></script>
+    <script>
+        var slides = document.querySelectorAll('.slide');
+        var currentSlide = 0;
+        var slideInterval = setInterval(nextSlide, 10000);
 
+        function nextSlide() {
+            slides[currentSlide].style.opacity = 0;
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = 1;
+        }
+    </script>
+    
 </body>
 </html>
